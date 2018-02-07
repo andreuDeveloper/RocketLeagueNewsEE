@@ -1,0 +1,342 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+     background: url("../img/back.jpg") center center no-repeat fixed;
+
+    font-family: 'Aldrich', sans-serif;
+}
+
+#jumb {
+    background: url("../img/jumb.jpg") 50% 63% no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+h1 {
+    font-size:  6vw !important;
+    display: none;
+    color: white !important;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.listaNormal {
+    margin-left: 2.5%;
+}
+
+.listaNormal li {
+    display: inline-block;
+    width: 24%;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+.dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+
+
+.listaNormal button{
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.glyphicon-home {
+    transform: scale(1.5);
+}
+
+
+#mybar {
+    margin-bottom: 20px;
+    font-size: 1em;
+    z-index: 30;
+}
+
+#mybar a:hover{
+    color: greenyellow !important;
+}
+
+.dropdown-menu {
+    background: #222222 !important;
+}
+
+.dropdown-menu li a:hover {
+    background: #4F4F4F !important;
+}
+
+.dr {
+    line-height: 200% !important;
+    color: white !important;
+}
+
+#mainC {
+    width: 100%;
+}
+
+#notSlider {
+    position: relative;
+    width: 100%;
+}
+
+#titleCars {
+    color: white; 
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 3vw;
+}
+
+#myCarousel {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#notSlider img{ 
+    width: 100% !important;
+    border: solid 2px white;
+    border-radius: 2vw;
+}
+
+.carousel-control{
+    border-radius: 2vw;
+}
+
+.row {
+    margin: 0;
+    margin-top: 40px;
+}
+
+#noticias {
+    /*background: blue;*/
+    float: left;
+    width: calc(100% - 300px - 20px);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    padding-top: 0;
+}
+
+#publicidad {
+    width: 300px;
+    float: right;
+    margin-right: 20px;
+}
+
+#pubV {
+    display: block;
+    width: 100%;
+}
+
+#pubH{
+    display: none;
+}
+
+
+.not {
+    /*background: lawngreen;*/
+    box-shadow: 0px 0px 6vw #888888;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    border: solid 2px darkgray;
+    overflow: hidden;
+    position: relative;
+}
+
+.not:hover {
+    /*background: lawngreen;*/
+    box-shadow: 0px 0px 6vw #888888;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    border: solid 2px greenyellow;
+    overflow: hidden;
+    position: relative;
+}
+
+.notTitle {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    font-size: 1.27vw;
+    color: greenyellow;
+}
+
+.date {
+    font-size: 1vw;
+    color: white;
+}
+
+.not img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+
+.not img:hover {
+    transform: scale(1.15);
+}
+
+
+.not .desc {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    font-size: 1.2vw;
+}
+
+#btnLoad {
+    width: calc(100% - 2em);
+    margin: auto;
+}
+
+
+#fbTime {
+    margin-top: 20px;
+    border: 0px;
+}
+
+.footer {
+    float: left;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    width: 100%;
+    background: #222222;
+    color: white;
+    text-align: center;
+}
+
+.about{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about li{
+  padding-left: 1em; 
+  line-height: 160%;
+}
+
+
+.icons li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1%;
+    transform: scale(0.6);
+    border: solid 1px #222222;
+    opacity: 0.6;
+}
+
+.icons li:hover{
+    transform: scale(0.7);
+    opacity: 1;
+    border: solid 1px greenyellow;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+/************************************************
+VERTICAL
+*************************************************/
+@media screen and (max-width: 750px){
+
+    #titleCars {
+        font-size: 5vw;
+    }
+
+    #noticias {
+        position: static;
+        width: 100%;
+    }
+
+    #publicidad {
+        height: 90px;
+        width: 100%;
+        position: static;
+        margin:0;
+        margin-bottom: 20px;
+    }
+    
+    .row {
+        margin: 0;
+    }
+
+    .col {
+        margin-bottom: 50px;
+    } 
+
+    #btnLoad {
+        width: 95%;
+        margin: auto;
+    }
+
+    .notTitle{
+        font-size: 4.2vw;
+    }
+
+    .date {
+        font-size: 2.4vw;
+    }
+
+    .not .desc {
+        font-size: 3vw;
+        position: relative;
+        text-align: justify;
+        display: block;
+        background: #222222;
+        border-top: solid 1.5px greenyellow;
+    }
+
+    .not img:hover {
+        transform: none;
+    }
+
+    #fbTime {
+        display: none;
+    }
+
+    #pubV {
+        display: none;
+    }
+
+    #pubH{
+        display: block;
+        margin: auto;
+    }
+}

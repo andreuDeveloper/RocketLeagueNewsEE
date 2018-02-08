@@ -29,4 +29,7 @@ public class NewsFacade extends AbstractFacade<News> {
         super(News.class);
     }
     
+    //Here the custom methods
+    
+    
 }

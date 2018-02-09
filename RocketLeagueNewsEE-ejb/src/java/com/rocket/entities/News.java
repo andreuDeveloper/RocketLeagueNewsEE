@@ -48,7 +48,7 @@ public class News implements Serializable {
     private Long id;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 30)
+    @Size(min = 1, max = 100)
     @Column(name = "title")
     private String title;
     @Basic(optional = false)

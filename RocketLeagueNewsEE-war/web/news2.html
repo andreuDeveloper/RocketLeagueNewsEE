@@ -1,164 +1,163 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Rocket League News</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Infórmate sobre todas las novedades del Rocket League, competitivo, nuevos parches y mucho más"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/styleNot.css">
-    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
-    <link rel="alternate" type="application/rss+xml" title="Rocket League News" href="rss/rss.xml">
+    <head>
+        <title>Rocket League News</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Infórmate sobre todas las novedades del Rocket League, competitivo, nuevos parches y mucho más"
+              />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/styleNot.css">
+        <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+        <link rel="alternate" type="application/rss+xml" title="Rocket League News" href="rss/rss.xml">
 
-    <meta property="og:site_name" content="Rocket League News">
-    <meta property="og:url" content="https://rawgit.com/SOSandreu1095/WebNoticias/master/news2.html">
-    <meta property="og:title" content="NEW GAMEMODE - DROPSHOT">
-    <meta property="og:image" content="https://raw.githubusercontent.com/SOSandreu1095/WebNoticias/master/img/not/dropshot.jpg">
-    <meta property="og:description" content="Another FREE mode is coming to Rocket League later this month!">
-</head>
+        <meta property="og:site_name" content="Rocket League News">
+        <meta property="og:url" content="https://rawgit.com/SOSandreu1095/WebNoticias/master/news2.html">
+        <meta property="og:title" content="NEW GAMEMODE - DROPSHOT">
+        <meta property="og:image" content="https://raw.githubusercontent.com/SOSandreu1095/WebNoticias/master/img/not/dropshot.jpg">
+        <meta property="og:description" content="Another FREE mode is coming to Rocket League later this month!">
+    </head>
 
-<body>
+    <body>
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+        <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div id="jumb" class="jumbotron text-center">
-        <h1>ROCKET LEAGUE NEWS</h1>
-    </div>
+        <div id="jumb" class="jumbotron text-center">
+            <h1>ROCKET LEAGUE NEWS</h1>
+        </div>
 
-    <nav id="mybar" class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-                <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="#"><a href="#">Competitive</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Workshop</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Patches<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" class="dr">Patch 1.34</a></li>
-                            <li><a href="#" class="dr">Patch 1.33</a></li>
-                            <li><a href="#" class="dr">Patch 1.32</a></li>
-                            <li><a href="#" class="dr">Patch 1.31</a></li>
-                            <li><a href="#" class="dr">Patch 1.30</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" id="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
+        <nav id="mybar" class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="#"><a href="#">Competitive</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Workshop</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Patches<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="dr">Patch 1.34</a></li>
+                                <li><a href="#" class="dr">Patch 1.33</a></li>
+                                <li><a href="#" class="dr">Patch 1.32</a></li>
+                                <li><a href="#" class="dr">Patch 1.31</a></li>
+                                <li><a href="#" class="dr">Patch 1.30</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" id="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div id="mainC">
-        <div id="publicidad">
-            <a href="publ.html"><img id="pubV" class="img-responsive center-block" src="img/ads/1h.jpg" alt="pub ver img"></a>
-            <a href="publ.html">
-                <picture>
-                    <source srcset="img/ads/1m.png" media="(min-width: 650px)">
-                    <source srcset="img/ads/2m.png" media="(min-width: 500px)">
-                    <source srcset="img/ads/3m.png" media="(min-width: 400px)">
-
-                    <img id="pubH" class="img-responsive center-block" src="img/ads/4m.png" alt="pub hor img">
-                </picture>
-            </a>
-            <iframe id="fbTime" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRocketLeague%2F&tabs=timeline&width=300&height=800&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
-                width="300" height="800" style="border:none;overflow:hidden"></iframe>
-        </div>
-        <div id="noticias">
-            <div id="c" class="container">
-                <h3 class="title">NEW GAMEMODE - DROPSHOT</h3>
-                <h5 class="date">Mon Mar 13 2017</h5>
-                <div id="c2" class="text-justify">
+        <div id="mainC">
+            <div id="publicidad">
+                <a href="publ.html"><img id="pubV" class="img-responsive center-block" src="img/ads/1h.jpg" alt="pub ver img"></a>
+                <a href="publ.html">
                     <picture>
-                        <source srcset="img/not/dropshot.jpg" media="(max-width: 400px)">
-                        <source srcset="img/not/dropshot.jpg">
-                        <img class="imgN img-responsive center-block" src="img/not/dropshot.jpg" alt="dropshotIMG">
-                    </picture>
-                    <p>Another FREE mode is coming to Rocket League later this month!</p>
-                    <p>Dropshot is a brand new take on Rocket League gameplay as we introduce dynamic breakable floors and an
-                        electrified ball, all within the confines of a new hexagonal Arena, 'Core 707'. Instead of pushing
-                        the ball into your opponent’s goal, your objective is to destroy panels on the opposing team’s floor,
-                        and score goals through those gaps.</p>
-                    <p>Our new game mode is all about Damage! Along with our usual stats like Goals, Assists, and Saves, Dropshot
-                        introduces Damage as a statistic -- the more damage you do, the more floor panels break, and the
-                        easier it is to score a goal! Each panel can be hit by a ball twice -- the first hit activates the
-                        panel, while the second breaks the panel, creating a new scoring opportunity.</p>
-                    <p>The new ball has three different phases, each more powerful than the last, that determine how much damage
-                        is done when the ball smashes into the floor panels. The second and third phases are activated by
-                        multiple Battle-Car hits, so the longer the ball stays off the ground, the more powerful it becomes.
-                        While the first phase of the new ball only damages one tile upon impact, the second and third phases
-                        can damage up to seven and 19 panels, respectively. Check out the Dropshot trailer below!</p>
+                        <source srcset="img/ads/1m.png" media="(min-width: 650px)">
+                        <source srcset="img/ads/2m.png" media="(min-width: 500px)">
+                        <source srcset="img/ads/3m.png" media="(min-width: 400px)">
 
-                    <div class="if embed-responsive embed-responsive-16by9">
-                        <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/MdBvId4DyIg" frameborder="0" allowfullscreen></iframe>
+                        <img id="pubH" class="img-responsive center-block" src="img/ads/4m.png" alt="pub hor img">
+                    </picture>
+                </a>
+                <iframe id="fbTime" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRocketLeague%2F&tabs=timeline&width=300&height=800&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
+                        width="300" height="800" style="border:none;overflow:hidden"></iframe>
+            </div>
+            <div id="noticias">
+                <div id="c" class="container">
+                    <h3 class="title">NEW GAMEMODE - DROPSHOT</h3>
+                    <h5 class="date">Mon Mar 13 2017</h5>
+                    <div id="c2" class="text-justify">
+                        <picture>
+                            <source srcset="img/not/dropshot.jpg" media="(max-width: 400px)">
+                            <source srcset="img/not/dropshot.jpg">
+                            <img class="imgN img-responsive center-block" src="img/not/dropshot.jpg" alt="dropshotIMG">
+                        </picture>
+                        <p>Another FREE mode is coming to Rocket League later this month!</p>
+                        <p>Dropshot is a brand new take on Rocket League gameplay as we introduce dynamic breakable floors and an
+                            electrified ball, all within the confines of a new hexagonal Arena, 'Core 707'. Instead of pushing
+                            the ball into your opponent’s goal, your objective is to destroy panels on the opposing team’s floor,
+                            and score goals through those gaps.</p>
+                        <p>Our new game mode is all about Damage! Along with our usual stats like Goals, Assists, and Saves, Dropshot
+                            introduces Damage as a statistic -- the more damage you do, the more floor panels break, and the
+                            easier it is to score a goal! Each panel can be hit by a ball twice -- the first hit activates the
+                            panel, while the second breaks the panel, creating a new scoring opportunity.</p>
+                        <p>The new ball has three different phases, each more powerful than the last, that determine how much damage
+                            is done when the ball smashes into the floor panels. The second and third phases are activated by
+                            multiple Battle-Car hits, so the longer the ball stays off the ground, the more powerful it becomes.
+                            While the first phase of the new ball only damages one tile upon impact, the second and third phases
+                            can damage up to seven and 19 panels, respectively. Check out the Dropshot trailer below!</p>
+
+                        <div class="if embed-responsive embed-responsive-16by9">
+                            <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/MdBvId4DyIg" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p>Along with Dropshot releasing on March 22, we have a host of other changes coming to Rocket League, including
+                            new achievements/trophies, painted Bodies and Rocket Trails, an Esports content button, the end of
+                            Competitive Season 3, a new Skill Tier hierarchy, and more!</p>
+                        <a id="ofSite" href="https://www.rocketleague.com/news/dropshot-new-game-mode-march-22" />Official site</a>
                     </div>
-                    <p>Along with Dropshot releasing on March 22, we have a host of other changes coming to Rocket League, including
-                        new achievements/trophies, painted Bodies and Rocket Trails, an Esports content button, the end of
-                        Competitive Season 3, a new Skill Tier hierarchy, and more!</p>
-                    <a id="ofSite" href="https://www.rocketleague.com/news/dropshot-new-game-mode-march-22" />Official site</a>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <div class="footer">
+        <div class="footer">
 
-        <ul class="icons">
-            <li id="fb">
-                <a href="https://www.facebook.com/RocketLeague/"><img class="img-responsive center-block" src="img/icons/facebook.png" alt="fb logo" /></a>
-            </li>
-            <li id="tw">
-                <a href="https://twitter.com/rocketleague?lang=es"><img class="img-responsive center-block" src="img/icons/twitter.png" alt="tw logo" /></a>
-            </li>
-            <li id="yb">
-                <a href="https://www.youtube.com/user/RocketLeagueGame"><img class="img-responsive center-block" src="img/icons/youtube.png" alt="yb logo" /></a>
-            </li>
-            <li id="gg">
-                <a href="https://plus.google.com/communities/100086543914019394793"><img class="img-responsive center-block" src="img/icons/google.png" alt="gg logo" /></a>
-            </li>
-        </ul>
+            <ul class="icons">
+                <li id="fb">
+                    <a href="https://www.facebook.com/RocketLeague/"><img class="img-responsive center-block" src="img/icons/facebook.png" alt="fb logo" /></a>
+                </li>
+                <li id="tw">
+                    <a href="https://twitter.com/rocketleague?lang=es"><img class="img-responsive center-block" src="img/icons/twitter.png" alt="tw logo" /></a>
+                </li>
+                <li id="yb">
+                    <a href="https://www.youtube.com/user/RocketLeagueGame"><img class="img-responsive center-block" src="img/icons/youtube.png" alt="yb logo" /></a>
+                </li>
+                <li id="gg">
+                    <a href="https://plus.google.com/communities/100086543914019394793"><img class="img-responsive center-block" src="img/icons/google.png" alt="gg logo" /></a>
+                </li>
+            </ul>
 
-        <ul class="about">
-            <li>DESIGNER: Andreu Juan Ferrá</li>
-            <li>DEVELOPED: Andreu Juan Ferrá</li>
-            <li>BASED ON the oficial game Rocket League</li>
-            <li>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com"
-                    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></li>
-        </ul>
-    </div>
-
-
-
-
-</body>
+            <ul class="about">
+                <li>DESIGNER: Andreu Juan Ferrá</li>
+                <li>DEVELOPED: Andreu Juan Ferrá</li>
+                <li>BASED ON the oficial game Rocket League</li>
+                <li>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com"
+                                                                                                       title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                                                                                                       title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

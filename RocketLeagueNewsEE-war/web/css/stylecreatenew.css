@@ -1,0 +1,204 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../img/back.jpg") center center no-repeat fixed;
+    font-family: 'Aldrich', sans-serif;
+}
+
+#jumb {
+    background: url("../img/jumb.jpg") 50% 63% no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+h1 {
+    font-size:  6vw !important;
+    color: white !important;
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.listaNormal {
+    margin-left: 2.5%;
+}
+
+.listaNormal li {
+    list-style-type: none;
+    display: inline-block;
+    width: 24%;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+.dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
+
+
+.listaNormal button{
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.glyphicon-home {
+    transform: scale(1.5);
+}
+
+
+#mybar {
+    margin-bottom: 20px;
+    font-size: 1em;
+    z-index: 30;
+}
+
+#mybar a:hover{
+    color: greenyellow !important;
+}
+
+.dropdown-menu {
+    background: #222222 !important;
+}
+
+.dropdown-menu li a:hover {
+    background: #4F4F4F !important;
+}
+
+.dr {
+    line-height: 200% !important;
+    color: white !important;
+}
+
+#mainC {
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+    border: solid #666666;
+    border-radius: 5px;
+    background-color: rgba(40, 42, 52, 0.6);
+}
+
+
+p {
+    color: white;
+    font-size: 1.1em;
+    line-height: 160%;
+    margin: 20px 0 20px 0;
+}
+
+
+a {
+    color: yellowgreen;
+}
+
+
+.if {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1px greenyellow; 
+}
+
+label {
+    color: white;
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.footer {
+    float: left;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    width: 100%;
+    background: #222222;
+    color: white;
+    text-align: center;
+}
+
+.about{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about a {
+    color: white;
+}
+
+.about li{
+  padding-left: 1em; 
+  line-height: 160%;
+}
+
+
+.icons li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1%;
+    transform: scale(0.6);
+    border: solid 1px #222222;
+    opacity: 0.6;
+}
+
+.icons li:hover{
+    transform: scale(0.7);
+    opacity: 1;
+    border: solid 1px greenyellow;
+    border-radius: 50%;
+}
+
+
+#ofSite:hover {
+    color: yellow;
+}
+
+#ofSite {
+    font-size: 1.3em;
+    line-height: 200%;
+}
+
+.imgN {
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+}
+
+#btnAddNew {
+    display: block;
+    margin: auto;
+    padding: 12px 30px 12px 30px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+/************************************************
+VERTICAL
+*************************************************/
+@media screen and (max-width: 750px){
+
+    #ofSite {
+        font-size: 1.3em;
+    }
+}

@@ -46,7 +46,6 @@ public class CreateNewServlet extends HttpServlet {
             n.setDescription(description);
             n.setUsername(username);
             
-            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
             n.setDate(date);
             newsFacade.create(n);

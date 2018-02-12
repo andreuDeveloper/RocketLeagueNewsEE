@@ -5,16 +5,17 @@
         <title>Rocket League - Create New</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="js/createnew.js"></script>
         <link rel="stylesheet" href="css/stylecreatenew.css">
         <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
-        <link rel="alternate" type="application/rss+xml" title="Rocket League News" href="rss/rss.xml">
         <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
-        <script src="js/dropzone.js"></script>
+
+        <script src="/RocketLeagueNewsEE-war/js/jquery.toast.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/RocketLeagueNewsEE-war/css/jquery.toast.min.css" />
     </head>
 
     <body>
@@ -67,7 +68,7 @@
         <div id="mainC">
             <p class="text-center ">CRATE NEW</p>
             <hr>
-            <form>
+            <form id="formNew">
                 <div class="form-group">
                     <label for="titlenew">NEW'S TITLE</label>
                     <input type="text" class="form-control" id="titlenew" aria-describedby="Title New" maxlength="100" placeholder="Enter a title for the new">
@@ -85,7 +86,7 @@
                 <small id="smalltitlenew" class="form-text text-muted">Insert an image</small>
 
                 <br>
-                <button id="btnAddNew" type="submit" class="btn btn-primary">ADD NEW</button>
+                <button id="btnAddNew" type="submit" form="formNew" value="Submit" class="btn btn-primary">ADD NEW</button>
             </form>
 
         </div>

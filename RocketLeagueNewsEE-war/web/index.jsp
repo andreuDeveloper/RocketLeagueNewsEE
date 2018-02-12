@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 12-feb-2018, 10:06:22
+    Author     : Andreu
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -62,6 +69,7 @@
                                 <li><a href="#" class="dr">Patch 1.30</a></li>
                             </ul>
                         </li>
+                        <li class="#"><a href="./createnew.html">Create New</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" id="search">
                         <div class="input-group">

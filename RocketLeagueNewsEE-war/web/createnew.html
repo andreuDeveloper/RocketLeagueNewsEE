@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="js/createnew.js"></script>
@@ -20,6 +20,13 @@
 
     <body>
 
+        <div id="divCargando">
+            <div>
+                <div>
+                    <img id="imgLoad" src="img/icons/loading.gif" alt="Gif Loading">
+                </div>
+            </div>
+        </div>
 
         <div id="jumb" class="jumbotron text-center">
             <h1>ROCKET LEAGUE NEWS</h1>
@@ -33,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand active" href="index.html"><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="navbar-brand active" href="./"><span class="glyphicon glyphicon-home"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -71,7 +78,7 @@
             <form id="formNew">
                 <div class="form-group">
                     <label for="titlenew">NEW'S TITLE</label>
-                    <input type="text" class="form-control" id="titlenew" aria-describedby="Title New" maxlength="100" placeholder="Enter a title for the new">
+                    <input type="text" class="form-control" id="titlenew" aria-describedby="Title New" maxlength="100" placeholder="Enter a title for the new" required>
                     <small id="smalltitlenew" class="form-text text-muted">The title must be informative and short</small>
                 </div>
 
@@ -83,7 +90,7 @@
 
                 <label for="imgUpload">UPLOAD IMAGE</label>
                 <input type="file" name="pic" class="form-control" id="imgUpload" accept="image/*">
-                <small id="smalltitlenew" class="form-text text-muted">Insert an image</small>
+                <small id="smalltitlenew" class="form-text text-muted">Insert an image (This image must be representative - It will be the "Image of the New")</small>
 
                 <br>
                 <button id="btnAddNew" type="submit" form="formNew" value="Submit" class="btn btn-primary">ADD NEW</button>

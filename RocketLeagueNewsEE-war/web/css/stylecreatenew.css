@@ -144,8 +144,8 @@ label {
 }
 
 .about li{
-  padding-left: 1em; 
-  line-height: 160%;
+    padding-left: 1em; 
+    line-height: 160%;
 }
 
 
@@ -187,7 +187,30 @@ label {
     width: 200px;
 }
 
+#divCargando {
+    display: none;
+    z-index: 99;
+    background-color:rgba(150, 64, 12, 0.65);
+    position: fixed;
+    width: 100%;
+    height: 100%; 
+}
 
+#divCargando div {
+    width: 100%;
+    height: 100%;
+    text-align:center; 
+    display: table;
+}
+
+#divCargando div div {
+    display:table-cell;
+    vertical-align:middle
+}
+
+#divCargando div div img {
+    width: 15%;
+}
 
 
 
@@ -196,9 +219,13 @@ label {
 /************************************************
 VERTICAL
 *************************************************/
-@media screen and (max-width: 750px){
+@media screen and (max-width: 767.5px){
 
     #ofSite {
         font-size: 1.3em;
+    }
+
+    #divCargando div div img {
+        width: 33%;
     }
 }

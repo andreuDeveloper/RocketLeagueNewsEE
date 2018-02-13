@@ -1,18 +1,12 @@
 <%-- 
-    Document   : index
-    Created on : 12-feb-2018, 10:06:22
+    Document   : new
+    Created on : 13-feb-2018, 11:52:25
     Author     : Andreu
 --%>
 
-<%@page import="com.rocket.entities.News"%>
-<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<% List<News> news = (List<News>) request.getAttribute("firstNews");%>
-
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>Rocket League News</title>
         <meta charset="utf-8">
@@ -21,16 +15,13 @@
         <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/js.js"></script>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styleNew.css">
         <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
-        <link rel="alternate" type="application/rss+xml" title="Rocket League News" href="rss/rss.xml">
 
-        <meta property="og:site_name" content="Rocket League News">
-        <meta property="og:url" content="https://rawgit.com/SOSandreu1095/WebNoticias/master/index.html">
-        <meta property="og:title" content="Rocket League News">
-        <meta property="og:description" content="All the news of Rocket League here!">
+        <script src="/RocketLeagueNewsEE-war/js/jquery.toast.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/RocketLeagueNewsEE-war/css/jquery.toast.min.css" />
     </head>
+
 
     <body>
 
@@ -48,6 +39,7 @@
         <div id="jumb" class="jumbotron text-center">
             <h1>ROCKET LEAGUE NEWS</h1>
         </div>
+
 
         <nav id="mybar" class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -91,6 +83,7 @@
         </nav>
 
         <div id="mainC">
+
             <div id="publicidad">
                 <a href="publ.html"><img id="pubV" class="img-responsive center-block" src="img/ads/1h.jpg" alt="pub ver img"></a>
                 <a href="publ.html">
@@ -105,105 +98,56 @@
                 <iframe id="fbTime" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRocketLeague%2F&tabs=timeline&width=300&height=800&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
                         width="300" height="800" style="border:none;overflow:hidden"></iframe>
             </div>
-            <div id="noticias" class="container-fluid">
-                <div id="notSlider">
-                    <h2 id="titleCars" class="text-center">NEW CARS INCOMMING</h2>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img class="img-responsive center-block" src="img/cars/endo.jpg" alt="endo img">
+            <div id="noticias">
+                <div id="c" class="container">
+                    <h3 class="title">COMMUNITY TRAININGS</h3>
+                    <h5 class="date">Thu Apr 13 2017</h5>
+                    <div id="c2" class="text-justify">
+                        <picture>
+                            <source srcset="img/not/training.jpg" media="(max-width: 400px)">
+                            <source srcset="img/not/training.jpg">
+                            <img class="imgN img-responsive center-block" src="img/not/training.jpg" alt="dropshotIMG">
+                        </picture>
+
+                        <div id="descriptionNew">
+                            <p>Since we published Rocket League’s first Community Spotlight back in February, we’ve added a new Featured
+                                tab in the Custom Training window as part of the Dropshot Update. Our first Spotlight focused on
+                                "Obstacle Course 1," which saw a 30% increase in subscriptions after our post. Now we’re beginning
+                                to take a more tactical approach to how we introduce players to community-made content.</p>
+
+                            <p>We want to try our best to cater to players of all skill levels, as well as provide Custom Training sequences
+                                and Steam Workshop maps that help teach our players a broad range of skills and mechanics.</p>
+                            <p>
+                                For today's Community Spotlight, we have introduced a new list of Featured Custom Training sequences that will help teach
+                                you skills like aerial dribbling, clearing passes off the backboard, and saving shots coming from
+                                behind.
+                            </p>
+                            <p>If you’re looking to share or explore more community-made Custom Training codes, head over to the RLCustomTraining
+                                subreddit, and RLG’s Training Browser. Both are excellent resources for training codes, and you can
+                                share or explore up-and-coming levels as well.</p>
+                            <p>Like always, if you train a lot, you will be able to improve your skills, we want to show a montage of
+                                a user of this community called SOSandreu1095, also known as [BRAINDEAD]SOS, he said to us that he
+                                is trying to practice every day with our custom maps, and he is feeling better day by day, enjoy
+                                that!
+                            </p>
+                            <div class="if embed-responsive embed-responsive-16by9">
+                                <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/K86TYRRw1co" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <p>And enjoy the second part too!
+                            </p>
+                            <div class="if embed-responsive embed-responsive-16by9">
+                                <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/aBs9ItvWy8o" frameborder="0" allowfullscreen></iframe>
                             </div>
 
-                            <div class="item">
-                                <img class="img-responsive center-block" src="img/cars/after.jpg" alt="after img">
-                            </div>
-
-                            <div class="item">
-                                <img class="img-responsive center-block" src="img/cars/gt.jpg" alt="gt img">
-                            </div>
+                            <p>If Custom Training isn’t your style, then Steam Workshop hosts a handful of challenging scenarios. One
+                                such map is "Thanrek’s Aerial Training," which will help fine-tune your aerial abilities as you maneuver
+                                your rocket powered car through obstacles.</p>
+                            <a id="ofSite" href="https://www.rocketleague.com/news/community-spotlight-april-2017/">Official site</a>
                         </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
-
-                <!-- NEWS HERE -->
-                <div class="row">
-                    <div class="col col-sm-6">
-                        <a href="news1.html">
-                            <h3 class="notTitle"><%=news.get(0).getTitle()%></h3>
-                            <h5 class="date"><%=news.get(0).getDate()%></h5>
-                            <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
-                                <p class="desc">
-                                    <%=news.get(0).getDescription()%>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col col-sm-6">
-                        <a href="news1.html">
-                            <h3 class="notTitle"><%=news.get(1).getTitle()%></h3>
-                            <h5 class="date"><%=news.get(1).getDate()%></h5>
-                            <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
-                                <p class="desc">
-                                    <%=news.get(1).getDescription()%>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-sm-6">
-                        <a href="news1.html">
-                            <h3 class="notTitle"><%=news.get(2).getTitle()%></h3>
-                            <h5 class="date"><%=news.get(2).getDate()%></h5>
-                            <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
-                                <p class="desc">
-                                    <%=news.get(2).getDescription()%>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col col-sm-6">
-                        <a href="news1.html">
-                            <h3 class="notTitle"><%=news.get(3).getTitle()%></h3>
-                            <h5 class="date"><%=news.get(3).getDate()%></h5>
-                            <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
-                                <p class="desc">
-                                    <%=news.get(3).getDescription()%>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                                
-                <div id="notCargar">
-
-                </div>
-                <button type="button" id="btnLoad" class="btn btn-info btn-block">CHARGE MORE NEWS</button>
             </div>
-
-
         </div>
 
 

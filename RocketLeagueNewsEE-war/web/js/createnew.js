@@ -23,6 +23,8 @@ function initTextArea() {
         height: 200,
         max_height: 350,
         menubar: true,
+        entity_encoding: "raw",
+        encoding: "UTF-8",
         plugins: [
             'advlist autolink lists link charmap print preview anchor textcolor',
             'searchreplace visualblocks code',
@@ -37,6 +39,7 @@ function initTextArea() {
 
 
 function createNewPost() {
+    $("#divCargando").fadeIn(400);
     var url = "CreateNewServlet";
     var title = $("#titlenew").val();
     var description = tinymce.activeEditor.getContent();
@@ -47,8 +50,10 @@ function createNewPost() {
         data: {title: title, description: description, image: image},
         success: function (rsp) {
             showToast("Successfull", rsp["mess"], "success", "#36B62D");
+            $("#divCargando").fadeOut(400);
         },
         error: function (e) {
+            $("#divCargando").fadeOut(400);
             if (e["responseJSON"] === undefined)
                 showToast("UNKNOWN ERROR", "Try it later", "error", "#D43721");
             else
@@ -56,6 +61,7 @@ function createNewPost() {
         }
     });
 }
+
 
 
 /**

@@ -37,7 +37,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "News.findByDate", query = "SELECT n FROM News n WHERE n.date = :date")
     , @NamedQuery(name = "News.findBySlug", query = "SELECT n FROM News n WHERE n.slug = :slug")
     , @NamedQuery(name = "News.findByUsername", query = "SELECT n FROM News n WHERE n.username = :username")
-    , @NamedQuery(name = "News.findByImage", query = "SELECT n FROM News n WHERE n.image = :image")})
+    , @NamedQuery(name = "News.findByImage", query = "SELECT n FROM News n WHERE n.image = :image")
+    ,@NamedQuery(name = "News.findLatestNews", query = "SELECT n FROM News n ORDER BY n.date DESC")})
 public class News implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,7 +49,7 @@ public class News implements Serializable {
     private Long id;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 100)
+    @Size(min = 1, max = 2147483647)
     @Column(name = "title")
     private String title;
     @Basic(optional = false)
@@ -165,5 +166,5 @@ public class News implements Serializable {
     public String toString() {
         return "com.rocket.entities.News[ id=" + id + " ]";
     }
-    
+
 }

@@ -43,7 +43,7 @@ public class GetMoreNews extends HttpServlet {
 
             if (ln.size() > 0) {
                 removeTagsAndFormat(ln);
-                Gson gson = new GsonBuilder().create();
+                Gson gson = new GsonBuilder().setDateFormat("EEE MMM d HH:mm:ss zzz YYYY").create();
                 response.setContentType("application/json");
                 PrintWriter pw = response.getWriter();
                 pw.println(gson.toJson(ln));

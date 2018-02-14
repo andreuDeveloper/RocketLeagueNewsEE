@@ -102,7 +102,7 @@
             <div id="noticias">
                 <div id="c" class="container">
                     <h3 class="title">COMMUNITY TRAININGS</h3>
-                    <h5 class="date">Thu Apr 13 2017</h5>
+                    <h5 class="date">Thu Apr 13 2017 <span> - USUARIO</span></h5>
                     <div id="c2" class="text-justify">
                         <picture>
                             <source srcset="img/not/training.jpg" media="(max-width: 400px)">

@@ -6,6 +6,7 @@
 package com.rocket.session;
 
 import com.rocket.entities.News;
+import java.util.Date;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -35,4 +36,7 @@ public class NewsFacade extends AbstractFacade<News> {
         return em.createNamedQuery("News.findLatestNews").setMaxResults(n).getResultList();
     }
 
+    public List<News> findPreviousNews(int id, int n) {
+        return em.createNamedQuery("News.findPreviousNews").setParameter("id", id).setMaxResults(n).getResultList();
+    }
 }

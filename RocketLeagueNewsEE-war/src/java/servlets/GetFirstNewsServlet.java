@@ -28,48 +28,31 @@ public class GetFirstNewsServlet extends HttpServlet {
     @EJB
     private NewsFacade newsFacade;
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet GetFirstNewsServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet GetFirstNewsServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
         List<News> ln = newsFacade.findLatestNews(4);
-        
 
-        //Remove tags and format
+        removeTagsAndFormat(ln);
+        
+        System.out.println("TAMAÑOOOOOOOOOOOO: " + ln.size());
+        request.setAttribute("firstNews", ln);
+
+        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+        rd.forward(request, response);
+
+    }
+
+    //Remove tags and format
+    private void removeTagsAndFormat(List<News> ln) {
         for (News n : ln) {
-            
+
             String title = Jsoup.parse(n.getTitle()).text().toUpperCase();
             String description = Jsoup.parse(n.getDescription()).text();
-            
 
-            if (title.length() > 30) {
-                n.setTitle(title.substring(0, 30) + "...");
+            if (title.length() > 25) {
+                n.setTitle(title.substring(0, 25) + "...");
             } else {
                 n.setTitle(title);
             }
@@ -79,29 +62,9 @@ public class GetFirstNewsServlet extends HttpServlet {
             } else {
                 n.setDescription(description);
             }
-            
-            System.out.println("FINAL:" +n.getDescription());
+
+            System.out.println("FINAL:" + n.getDescription());
         }
-        System.out.println("TAMAÑOOOOOOOOOOOO: " + ln.size());
-        request.setAttribute("firstNews", ln);
-
-        RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-        rd.forward(request, response);
-
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
     }
 
 }

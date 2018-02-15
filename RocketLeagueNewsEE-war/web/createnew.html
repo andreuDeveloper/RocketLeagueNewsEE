@@ -16,6 +16,8 @@
 
         <script src="/RocketLeagueNewsEE-war/js/jquery.toast.min.js"></script>
         <link rel="stylesheet" type="text/css" href="/RocketLeagueNewsEE-war/css/jquery.toast.min.css" />
+        <script src='js/fileinput.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/fileinput.css"> 
     </head>
 
     <body>
@@ -76,22 +78,24 @@
         <div id="mainC">
             <p class="text-center ">CRATE NEW</p>
             <hr>
-            <form id="formNew">
+            
+            <form method="POST" enctype="multipart/form-data" id="formNew">
                 <div class="form-group">
                     <label for="titlenew">NEW'S TITLE</label>
-                    <input type="text" class="form-control" id="titlenew" aria-describedby="Title New" maxlength="100" placeholder="Enter a title for the new" required>
+                    <input type="text" class="form-control" name="titlenew" id="titlenew" aria-describedby="Title New" maxlength="100" placeholder="Enter a title for the new" required>
                     <small id="smalltitlenew" class="form-text text-muted">The title must be informative and short</small>
                 </div>
 
                 <label>NEW'S CONTENT</label>
-                <textarea id="areaDescription">
+                <textarea id="areaDescription" name ="description">
                    <h3>Insert here the content of the new</h3>
                 </textarea>
 
-
-                <label for="imgUpload">UPLOAD IMAGE</label>
-                <input type="file" name="pic" class="form-control" id="imgUpload" accept="image/*">
-                <small id="smalltitlenew" class="form-text text-muted">Insert an image (This image must be representative - It will be the "Image of the New")</small>
+                <div class="form-group">
+                    <label for="imgUpload">UPLOAD IMAGE</label>
+                    <input id="file" name="file" type="file" class="file" data-show-upload="false" data-show-caption="true" data-allowed-file-extensions='["jpg","png"]' required>
+                    <small id="smalltitlenew" class="form-text text-muted">Insert an image (This image must be representative - It will be the "Image of the New")</small>
+                </div>
 
                 <br>
                 <button id="btnAddNew" type="submit" form="formNew" value="Submit" class="btn btn-primary">ADD NEW</button>

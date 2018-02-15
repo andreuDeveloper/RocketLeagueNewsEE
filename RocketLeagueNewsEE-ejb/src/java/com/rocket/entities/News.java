@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "News.findBySlug", query = "SELECT n FROM News n WHERE n.slug = :slug")
     , @NamedQuery(name = "News.findByUsername", query = "SELECT n FROM News n WHERE n.username = :username")
     , @NamedQuery(name = "News.findByImage", query = "SELECT n FROM News n WHERE n.image = :image")
-    , @NamedQuery(name = "News.findLatestNews", query = "SELECT n FROM News n ORDER BY n.date DESC")
+    , @NamedQuery(name = "News.findLatestNews", query = "SELECT n FROM News n ORDER BY n.date")
     , @NamedQuery(name = "News.findPreviousNews", query = "SELECT n FROM News n WHERE n.id < :id ORDER BY n.date DESC")
 })
 public class News implements Serializable {

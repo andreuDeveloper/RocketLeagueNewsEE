@@ -6,12 +6,11 @@
 package com.rocket.session;
 
 import com.rocket.entities.News;
-import java.util.Date;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
+
 
 /**
  *

@@ -5,18 +5,18 @@
  */
 
 var tinymce;
-
-
 $(document).ready(function () {
+
     initTextArea();
     $("#formNew").submit(function () {
-        createNewPost();
+        if (tinymce.activeEditor.getContent().length > 0) {
+            createNewPost();
+        } else {
+            showToast("Insert a new's content", "", "warning", "#3366ff");
+        }
         return false;
     });
 });
-
-
-
 function initTextArea() {
     tinymce.init({
         selector: 'textarea',
@@ -41,13 +41,22 @@ function initTextArea() {
 function createNewPost() {
     $("#divCargando").fadeIn(400);
     var url = "CreateNewServlet";
-    var title = $("#titlenew").val();
-    var description = tinymce.activeEditor.getContent();
-    var image;
+
+    $("#btnLoad").prop("disabled", true); // deshabilitar enviar, evita doble post.
+
+    // Get form
+    var form = $('#formNew')[0];
+    // Create an FormData object
+    var data = new FormData(form);
+
     $.ajax({
-        method: "POST",
+        type: "POST",
+        enctype: 'multipart/form-data',
         url: url,
-        data: {title: title, description: description, image: image},
+        data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
         success: function (rsp) {
             showToast("Successfull", rsp["mess"], "success", "#36B62D");
             $("#divCargando").fadeOut(400);

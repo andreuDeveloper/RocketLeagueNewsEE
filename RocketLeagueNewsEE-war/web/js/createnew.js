@@ -30,7 +30,7 @@ function initTextArea() {
             'searchreplace visualblocks code',
             'insertdatetime media contextmenu paste code help wordcount'
         ],
-        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        toolbar: 'insert | undo redo |  formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
         content_css: [
             '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
             '//www.tinymce.com/css/codepen.min.css']
@@ -42,7 +42,7 @@ function createNewPost() {
     $("#divCargando").fadeIn(400);
     var url = "CreateNewServlet";
 
-    $("#btnLoad").prop("disabled", true); // deshabilitar enviar, evita doble post.
+    //$("#btnLoad").prop("disabled", true); // deshabilitar enviar, evita doble post.
 
     // Get form
     var form = $('#formNew')[0];

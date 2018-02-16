@@ -166,7 +166,7 @@
                 <!-- NEWS HERE -->
                 <div class="row">
                     <div class="col col-sm-6">
-                        <a href="news1.html">
+                        <a href="news/<%=news.get(0).getSlug()%>">
                             <h3 class="notTitle"><%=news.get(0).getTitle()%></h3>
                             <h5 class="date"><%=news.get(0).getDate()%></h5>
                             <div class="not img-rounded">
@@ -178,7 +178,7 @@
                         </a>
                     </div>
                     <div class="col col-sm-6">
-                        <a href="news1.html">
+                        <a href="news/<%=news.get(1).getSlug()%>">
                             <h3 class="notTitle"><%=news.get(1).getTitle()%></h3>
                             <h5 class="date"><%=news.get(1).getDate()%></h5>
                             <div class="not img-rounded">
@@ -192,7 +192,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-sm-6">
-                        <a href="news1.html">
+                        <a href="news/<%=news.get(2).getSlug()%>">
                             <h3 class="notTitle"><%=news.get(2).getTitle()%></h3>
                             <h5 class="date"><%=news.get(2).getDate()%></h5>
                             <div class="not img-rounded">
@@ -204,7 +204,7 @@
                         </a>
                     </div>
                     <div class="col col-sm-6">
-                        <a href="news1.html">
+                        <a href="news/<%=news.get(3).getSlug()%>">
                             <h3 class="notTitle"><%=news.get(3).getTitle()%></h3>
                             <h5 class="date"><%=news.get(3).getDate()%></h5>
                             <div class="not img-rounded">

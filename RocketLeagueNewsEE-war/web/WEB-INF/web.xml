@@ -12,6 +12,10 @@
         <servlet-name>GetMoreNews</servlet-name>
         <servlet-class>servlets.GetMoreNews</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadNew</servlet-name>
+        <servlet-class>servlets.LoadNew</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CreateNewServlet</servlet-name>
         <url-pattern>/CreateNewServlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>GetMoreNews</servlet-name>
         <url-pattern>/GetMoreNews</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadNew</servlet-name>
+        <url-pattern>/news/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

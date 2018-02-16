@@ -4,7 +4,12 @@
     Author     : Andreu
 --%>
 
+<%@page import="com.rocket.entities.News"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<% News n = (News) request.getAttribute("new");%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,10 +17,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="icon" href="img/icons/ico.ico" type="image/x-icon" />
+        <link rel="icon" href="../img/icons/ico.ico" type="image/x-icon" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/styleNew.css">
+        <link rel="stylesheet" href="../css/styleNew.css">
         <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 
         <script src="/RocketLeagueNewsEE-war/js/jquery.toast.min.js"></script>
@@ -49,7 +54,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand active" href="./"><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="navbar-brand active" href="../"><span class="glyphicon glyphicon-home"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -66,7 +71,7 @@
                                 <li><a href="#" class="dr">Patch 1.30</a></li>
                             </ul>
                         </li>
-                        <li class="#"><a href="./createnew.html">Create New</a></li>
+                        <li class="#"><a href="../createnew.html">Create New</a></li>
                     </ul>
                     <form class="navbar-form navbar-right" id="search">
                         <div class="input-group">
@@ -85,14 +90,14 @@
         <div id="mainC">
 
             <div id="publicidad">
-                <a href="publ.html"><img id="pubV" class="img-responsive center-block" src="img/ads/1h.jpg" alt="pub ver img"></a>
+                <a href="publ.html"><img id="pubV" class="img-responsive center-block" src="../img/ads/1h.jpg" alt="pub ver img"></a>
                 <a href="publ.html">
                     <picture>
-                        <source srcset="img/ads/1m.png" media="(min-width: 650px)">
-                        <source srcset="img/ads/2m.png" media="(min-width: 500px)">
-                        <source srcset="img/ads/3m.png" media="(min-width: 400px)">
+                        <source srcset="../img/ads/1m.png" media="(min-width: 650px)">
+                        <source srcset="../img/ads/2m.png" media="(min-width: 500px)">
+                        <source srcset="../img/ads/3m.png" media="(min-width: 400px)">
 
-                        <img id="pubH" class="img-responsive center-block" src="img/ads/4m.png" alt="pub hor img">
+                        <img id="pubH" class="img-responsive center-block" src="../img/ads/4m.png" alt="pub hor img">
                     </picture>
                 </a>
                 <iframe id="fbTime" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FRocketLeague%2F&tabs=timeline&width=300&height=800&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
@@ -101,49 +106,17 @@
 
             <div id="noticias">
                 <div id="c" class="container">
-                    <h3 class="title">COMMUNITY TRAININGS</h3>
-                    <h5 class="date">Thu Apr 13 2017 <span> - USUARIO</span></h5>
+                    <h3 class="title"><%=n.getTitle()%></h3>
+                    <h5 class="date"><%=n.getDate()%> <span> - (<%=n.getUsername()%>)</span></h5>
                     <div id="c2" class="text-justify">
                         <picture>
-                            <source srcset="img/not/training.jpg" media="(max-width: 400px)">
-                            <source srcset="img/not/training.jpg">
-                            <img class="imgN img-responsive center-block" src="img/not/training.jpg" alt="dropshotIMG">
+                            <source srcset="../img/uploads/<%=n.getId()%>.png" media="(max-width: 400px)">
+                            <source srcset="../img/uploads/<%=n.getId()%>.png">
+                            <img class="imgN img-responsive center-block" src="../img/uploads/<%=n.getId()%>.png" alt="dropshotIMG">
                         </picture>
 
                         <div id="descriptionNew">
-                            <p>Since we published Rocket League’s first Community Spotlight back in February, we’ve added a new Featured
-                                tab in the Custom Training window as part of the Dropshot Update. Our first Spotlight focused on
-                                "Obstacle Course 1," which saw a 30% increase in subscriptions after our post. Now we’re beginning
-                                to take a more tactical approach to how we introduce players to community-made content.</p>
-
-                            <p>We want to try our best to cater to players of all skill levels, as well as provide Custom Training sequences
-                                and Steam Workshop maps that help teach our players a broad range of skills and mechanics.</p>
-                            <p>
-                                For today's Community Spotlight, we have introduced a new list of Featured Custom Training sequences that will help teach
-                                you skills like aerial dribbling, clearing passes off the backboard, and saving shots coming from
-                                behind.
-                            </p>
-                            <p>If you’re looking to share or explore more community-made Custom Training codes, head over to the RLCustomTraining
-                                subreddit, and RLG’s Training Browser. Both are excellent resources for training codes, and you can
-                                share or explore up-and-coming levels as well.</p>
-                            <p>Like always, if you train a lot, you will be able to improve your skills, we want to show a montage of
-                                a user of this community called SOSandreu1095, also known as [BRAINDEAD]SOS, he said to us that he
-                                is trying to practice every day with our custom maps, and he is feeling better day by day, enjoy
-                                that!
-                            </p>
-                            <div class="if embed-responsive embed-responsive-16by9">
-                                <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/K86TYRRw1co" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <p>And enjoy the second part too!
-                            </p>
-                            <div class="if embed-responsive embed-responsive-16by9">
-                                <iframe class="youtube embed-responsive-item" src="https://www.youtube.com/embed/aBs9ItvWy8o" frameborder="0" allowfullscreen></iframe>
-                            </div>
-
-                            <p>If Custom Training isn’t your style, then Steam Workshop hosts a handful of challenging scenarios. One
-                                such map is "Thanrek’s Aerial Training," which will help fine-tune your aerial abilities as you maneuver
-                                your rocket powered car through obstacles.</p>
-                            <a id="ofSite" href="https://www.rocketleague.com/news/community-spotlight-april-2017/">Official site</a>
+                            <%=n.getDescription()%>
                         </div>
                     </div>
                 </div>
@@ -156,16 +129,16 @@
 
             <ul class="icons">
                 <li id="fb">
-                    <a href="https://www.facebook.com/RocketLeague/"><img class="img-responsive center-block" src="img/icons/facebook.png" alt="fb logo" /></a>
+                    <a href="https://www.facebook.com/RocketLeague/"><img class="img-responsive center-block" src="../img/icons/facebook.png" alt="fb logo" /></a>
                 </li>
                 <li id="tw">
-                    <a href="https://twitter.com/rocketleague?lang=es"><img class="img-responsive center-block" src="img/icons/twitter.png" alt="tw logo" /></a>
+                    <a href="https://twitter.com/rocketleague?lang=es"><img class="img-responsive center-block" src="../img/icons/twitter.png" alt="tw logo" /></a>
                 </li>
                 <li id="yb">
-                    <a href="https://www.youtube.com/user/RocketLeagueGame"><img class="img-responsive center-block" src="img/icons/youtube.png" alt="yb logo" /></a>
+                    <a href="https://www.youtube.com/user/RocketLeagueGame"><img class="img-responsive center-block" src="../img/icons/youtube.png" alt="yb logo" /></a>
                 </li>
                 <li id="gg">
-                    <a href="https://plus.google.com/communities/100086543914019394793"><img class="img-responsive center-block" src="img/icons/google.png" alt="gg logo" /></a>
+                    <a href="https://plus.google.com/communities/100086543914019394793"><img class="img-responsive center-block" src="../img/icons/google.png" alt="gg logo" /></a>
                 </li>
             </ul>
 

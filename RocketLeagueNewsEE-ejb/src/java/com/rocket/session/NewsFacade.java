@@ -11,7 +11,6 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-
 /**
  *
  * @author Andreu
@@ -38,8 +37,12 @@ public class NewsFacade extends AbstractFacade<News> {
     public List<News> findPreviousNews(int id, int n) {
         return em.createNamedQuery("News.findPreviousNews").setParameter("id", id).setMaxResults(n).getResultList();
     }
-    
+
     public boolean slugExists(String slug) {
         return em.createNamedQuery("News.findBySlug").setParameter("slug", slug).getResultList().size() > 0;
+    }
+
+    public News findNewBySlug(String slug) {
+        return (News) em.createNamedQuery("News.findBySlug").setParameter("slug", slug).getSingleResult();
     }
 }

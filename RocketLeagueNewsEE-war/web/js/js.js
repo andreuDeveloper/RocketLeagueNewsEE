@@ -2,6 +2,8 @@ var listIdNews = [];
 var alturaJumb;
 var alturaBar;
 
+var moreNews = true;
+
 var intervalPub;
 var imgPub = ["img/ads/1h.jpg", "img/ads/2h.jpg", "img/ads/3h.jpg"];
 var inxPub = 1;
@@ -23,7 +25,9 @@ $(document).ready(function () {
 
     //BOTON DE CARGAR NOTICIAS
     $("#btnLoad").click(function () {
-        cargarNoticias();
+        if (moreNews) {
+            cargarNoticias();
+        }
     });
 
 
@@ -32,17 +36,19 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1) {
-            cargarNoticias();
+            if (moreNews) {
+                cargarNoticias();
+            }
         }
         /*
-        if ($(window).scrollTop() > alturaJumb) {
-            $('#mybar').css('position', 'fixed').css('top', '0').css('width', '100%');
-            $('#mainC').css('margin-top', alturaBar);
-        } else {
-            $('#mybar').css('position', 'relative');
-            $('#mainC').css('margin-top', '20px');
-        }
-        */
+         if ($(window).scrollTop() > alturaJumb) {
+         $('#mybar').css('position', 'fixed').css('top', '0').css('width', '100%');
+         $('#mainC').css('margin-top', alturaBar);
+         } else {
+         $('#mybar').css('position', 'relative');
+         $('#mainC').css('margin-top', '20px');
+         }
+         */
 
     });
 
@@ -94,27 +100,29 @@ function cargarEfectos() {
 function cargarNoticias() {
 
 
-    $("#divCargando").stop(true,true).fadeIn(300);
+    $("#divCargando").stop(true, true).fadeIn(300);
     var url = "GetMoreNews";
     var numberOfNews = 2;
     var latestId = listIdNews[listIdNews.length - 1];
-    showToast(latestId, "Try it later", "error", "#D43721");
 
     $.ajax({
         method: "POST",
         url: url,
         data: {numberOfNews: numberOfNews, latestId: latestId},
         success: function (rsp) {
-            $("#divCargando").stop(true,true).fadeOut(300);
+            $("#divCargando").stop(true, true).fadeOut(300);
             if (rsp["mess"] === "No more news available") {
                 showToast("No more news", "", "warning", "#3366ff");
+                moreNews = false;
+                $("#btnLoad").text("NO MORE NEWS")
+                $("#btnLoad").prop("disabled", true);
             } else {
                 showToast("Loaded Successfully", "Loaded news", "success", "#36B62D");
                 crearNoticia(rsp);
             }
         },
         error: function (e) {
-            $("#divCargando").stop(true,true).fadeOut(300);
+            $("#divCargando").stop(true, true).fadeOut(300);
             if (e["responseJSON"] === undefined)
                 showToast("UNKNOWN ERROR", "Try it later", "error", "#D43721");
             else
@@ -158,7 +166,7 @@ function crearNoticia(jsn) {
         var n = document.createElement("div");
         n.className = "not img-rounded";
         var img = document.createElement("img");
-        img.src = "img/uploads/"+item.id+".png";
+        img.src = "img/uploads/" + item.id + ".png";
         img.alt = "image New";
         var des = document.createElement("p");
         des.className = "desc";
@@ -174,39 +182,6 @@ function crearNoticia(jsn) {
 
         cargarEfectos();
     });
-
-    /*
-     for (i = 0; i < 2; i++) {
-     var col = document.createElement("div");
-     col.className = "col col-sm-6";
-     var a = document.createElement("a");
-     a.setAttribute('href', "#");
-     var h3 = document.createElement("h3");
-     h3.className = "notTitle";
-     h3.textContent = json[i].title;
-     var h5 = document.createElement("h5");
-     h5.className = "date";
-     h5.textContent = json[i].date;
-     var n = document.createElement("div");
-     n.className = "not img-rounded";
-     var img = document.createElement("img");
-     img.src = "img/not/training.jpg";
-     img.alt = "image New";
-     var des = document.createElement("p");
-     des.className = "desc";
-     des.textContent = json[i].description;
-     
-     n.appendChild(img);
-     n.appendChild(des);
-     a.appendChild(h3);
-     a.appendChild(h5);
-     a.appendChild(n);
-     col.appendChild(a);
-     row.appendChild(col);
-     
-     cargarEfectos();
-     }
-     */
 }
 
 /**

@@ -35,8 +35,6 @@ public class GetFirstNewsServlet extends HttpServlet {
         List<News> ln = newsFacade.findLatestNews(4);
 
         removeTagsAndFormat(ln);
-        
-        System.out.println("TAMAÑOOOOOOOOOOOO: " + ln.size());
         request.setAttribute("firstNews", ln);
 
         RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
@@ -62,8 +60,6 @@ public class GetFirstNewsServlet extends HttpServlet {
             } else {
                 n.setDescription(description);
             }
-
-            System.out.println("FINAL:" + n.getDescription());
         }
     }
 

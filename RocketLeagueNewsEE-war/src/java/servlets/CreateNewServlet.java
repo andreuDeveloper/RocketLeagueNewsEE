@@ -9,14 +9,13 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.rocket.entities.News;
 import com.rocket.session.NewsFacade;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.nio.file.Paths;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.Date;
@@ -65,13 +64,13 @@ public class CreateNewServlet extends HttpServlet {
             n.setDescription(description);
             n.setUsername(username);
             n.setDate(new Date());
-            
+
             String slug = toSlug(title);
             int indSlug = 1;
-            while (newsFacade.slugExists(slug+"-"+indSlug)){
+            while (newsFacade.slugExists(slug + "-" + indSlug)) {
                 indSlug++;
             }
-            n.setSlug(slug+"-"+indSlug);
+            n.setSlug(slug + "-" + indSlug);
 
             newsFacade.create(n);
 
@@ -81,9 +80,8 @@ public class CreateNewServlet extends HttpServlet {
                     + File.separator + "img" + File.separator + "uploads" + File.separator + n.getId() + ".png";
 
             File outputFile = new File(path);
-            //OutputStream outStream = new FileOutputStream(outputFile);
             //Escribimos sobre el fichero la imagen tipo png
-            ImageIO.write(image, "png", outputFile);
+            ImageIO.write(resizeBufferedImage(image, 720, 480), "png", outputFile);
 
             Map<String, String> mess = new HashMap<>();
             mess.put("mess", "New Addedd");
@@ -106,11 +104,22 @@ public class CreateNewServlet extends HttpServlet {
 
     }
 
-    public String toSlug(String input) {
+    private String toSlug(String input) {
         String nowhitespace = WHITESPACE.matcher(input).replaceAll("-");
         String normalized = Normalizer.normalize(nowhitespace, Form.NFD);
         String slug = NONLATIN.matcher(normalized).replaceAll("");
         return slug.toLowerCase(Locale.ENGLISH);
+    }
+
+    private BufferedImage resizeBufferedImage(BufferedImage img, int newW, int newH) {
+        Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
+        BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB);
+
+        Graphics2D g2d = dimg.createGraphics();
+        g2d.drawImage(tmp, 0, 0, null);
+        g2d.dispose();
+
+        return dimg;
     }
 
 }

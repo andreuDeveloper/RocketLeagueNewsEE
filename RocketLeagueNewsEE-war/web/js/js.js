@@ -1,8 +1,7 @@
 var listIdNews = [];
-var fichLoaded = 0;
-var fichName = ["1.json", "2.json", "3.json"];
 var alturaJumb;
 var alturaBar;
+
 var intervalPub;
 var imgPub = ["img/ads/1h.jpg", "img/ads/2h.jpg", "img/ads/3h.jpg"];
 var inxPub = 1;
@@ -108,7 +107,7 @@ function cargarNoticias() {
         success: function (rsp) {
             $("#divCargando").stop(true,true).fadeOut(300);
             if (rsp["mess"] === "No more news available") {
-                showToast("No more news", "Try it later", "warning", "#3366ff");
+                showToast("No more news", "", "warning", "#3366ff");
             } else {
                 showToast("Loaded Successfully", "Loaded news", "success", "#36B62D");
                 crearNoticia(rsp);
@@ -144,7 +143,7 @@ function crearNoticia(jsn) {
     m.appendChild(row);
 
     $.each(jsn, function (i, item) {
-        listIdNews.push(item.id);
+        listIdNews.push(item.id.toString());
 
         var col = document.createElement("div");
         col.className = "col col-sm-6";

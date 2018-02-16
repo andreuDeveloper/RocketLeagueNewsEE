@@ -57,6 +57,7 @@ function createNewPost() {
         processData: false,
         contentType: false,
         cache: false,
+        timeout: 5000,
         success: function (rsp) {
             showToast("Successfull", rsp["mess"], "success", "#36B62D");
             $("#divCargando").fadeOut(400);

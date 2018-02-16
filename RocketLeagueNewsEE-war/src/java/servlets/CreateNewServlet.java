@@ -64,8 +64,14 @@ public class CreateNewServlet extends HttpServlet {
             n.setTitle(title);
             n.setDescription(description);
             n.setUsername(username);
-            n.setSlug(toSlug(title));
             n.setDate(new Date());
+            
+            String slug = toSlug(title);
+            int indSlug = 1;
+            while (newsFacade.slugExists(slug+"-"+indSlug)){
+                indSlug++;
+            }
+            n.setSlug(slug+"-"+indSlug);
 
             newsFacade.create(n);
 

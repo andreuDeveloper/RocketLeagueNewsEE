@@ -170,7 +170,7 @@
                             <h3 class="notTitle"><%=news.get(0).getTitle()%></h3>
                             <h5 class="date"><%=news.get(0).getDate()%></h5>
                             <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
+                                <img class="img-responsive center-block" src="img/uploads/<%=news.get(0).getId()%>.png" alt="image New">
                                 <p class="desc">
                                     <%=news.get(0).getDescription()%>
                                 </p>
@@ -182,7 +182,7 @@
                             <h3 class="notTitle"><%=news.get(1).getTitle()%></h3>
                             <h5 class="date"><%=news.get(1).getDate()%></h5>
                             <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
+                                <img class="img-responsive center-block" src="img/uploads/<%=news.get(1).getId()%>.png" alt="image New">
                                 <p class="desc">
                                     <%=news.get(1).getDescription()%>
                                 </p>
@@ -196,7 +196,7 @@
                             <h3 class="notTitle"><%=news.get(2).getTitle()%></h3>
                             <h5 class="date"><%=news.get(2).getDate()%></h5>
                             <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
+                                <img class="img-responsive center-block" src="img/uploads/<%=news.get(2).getId()%>.png" alt="image New">
                                 <p class="desc">
                                     <%=news.get(2).getDescription()%>
                                 </p>
@@ -208,7 +208,7 @@
                             <h3 class="notTitle"><%=news.get(3).getTitle()%></h3>
                             <h5 class="date"><%=news.get(3).getDate()%></h5>
                             <div class="not img-rounded">
-                                <img class="img-responsive center-block" src="img/not/training.jpg" alt="trainingIMG">
+                                <img class="img-responsive center-block" src="img/uploads/<%=news.get(3).getId()%>.png" alt="image ">
                                 <p class="desc">
                                     <%=news.get(3).getDescription()%>
                                 </p>

@@ -159,7 +159,7 @@ function crearNoticia(jsn) {
         var n = document.createElement("div");
         n.className = "not img-rounded";
         var img = document.createElement("img");
-        img.src = "img/not/training.jpg";
+        img.src = "img/uploads/"+item.id+".png";
         img.alt = "image New";
         var des = document.createElement("p");
         des.className = "desc";

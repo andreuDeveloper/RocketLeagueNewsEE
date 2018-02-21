@@ -54,38 +54,38 @@ EVALUATION
 CHANGELOG
 ---------
 * **C-01**
- * Update of the base project "Web Noticias" of DAM1, but in this case with Java EE
- * Creation of the database in postgreSQL
- * Configuration of the glassfish
- * Bind configuration Java EE - Glassfish and generation of entities EJB
+  * Update of the base project "Web Noticias" of DAM1, but in this case with Java EE
+  * Creation of the database in postgreSQL
+  * Configuration of the glassfish
+  * Bind configuration Java EE - Glassfish and generation of entities EJB
 * **C-02**
- * Changed index.html -> index.jsp
- * Creation of servlet that add a new
- * Creation of the desing of a web.html to create / add news
- * Limit the role of admin (roles of glassfish) to be the only one with access to the section "Create news"
+  * Changed index.html -> index.jsp
+  * Creation of servlet that add a new
+  * Creation of the desing of a web.html to create / add news
+  * Limit the role of admin (roles of glassfish) to be the only one with access to the section "Create news"
 * **C-03**
- * Insert of the library toast
- * First inserts and creation of news, but only with a title and a description of a textArea
+  * Insert of the library toast
+  * First inserts and creation of news, but only with a title and a description of a textArea
 * **C-04**
- * Changed the text area to the TinyMCE
- * Added nice clean file input plugin to upload images
- * (The uploads not work)
+  * Changed the text area to the TinyMCE
+  * Added nice clean file input plugin to upload images
+  * (The uploads not work)
 * **C-05**
- * Solved the upload problems of the images
- * Inserting news working, with title, description and image
- * Solved problems of UTF-8
- * Added the gif loading
+  * Solved the upload problems of the images
+  * Inserting news working, with title, description and image
+  * Solved problems of UTF-8
+  * Added the gif loading
 * **C-06**
- * Creation of a servlet to autoget the last 4 news
- * Insert of the news readed by the servlet in the index.jsp
- * Fixed some visual problems
+  * Creation of a servlet to autoget the last 4 news
+  * Insert of the news readed by the servlet in the index.jsp
+  * Fixed some visual problems
 * **C-07**
- * New servlet to charge more news
- * Implementation of an ajax with the servlet to get more news when the scroll reach the bottom of the screen of the button of more news is pushed
- * Added the gif of loading news
+  * New servlet to charge more news
+  * Implementation of an ajax with the servlet to get more news when the scroll reach the bottom of the screen of the button of more news is pushed
+  * Added the gif of loading news
 * **C-08**
- * New servlet to get an specific new
- * New jsp templete to charge news
- * Implementation between both
+  * New servlet to get an specific new
+  * New jsp templete to charge news
+  * Implementation between both
 * **C-09**
- * Fixes of the visualization, workflows, and more..
+  * Fixes of the visualization, workflows, and more..
